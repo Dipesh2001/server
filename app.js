@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const authRouter = require("./routes/auth-router");
+const productsRouter = require("./routes/products-router");
 const userRouter = require("./routes/user-router");
 const fs = require("fs");
 const cors = require("cors");
@@ -14,7 +14,7 @@ app.use(cors());
 
 // it is called mounting a router
 app.use("/user", userRouter);
-app.use("/api", authRouter);
+app.use("/api", productsRouter);
 
 // app.get("/register", (req, res) => {
 //     res.status(200).send("register")
